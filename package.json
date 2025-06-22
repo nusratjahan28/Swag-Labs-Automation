@@ -1,0 +1,24 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Testing the website functionalities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run wdio.conf.js",
+    "err": "wdio run ./wdio.conf.js --suite errorMsg",
+    "std_usr": "wdio run ./wdio.conf.js --suite std_user",
+    "perform": "wdio run ./wdio.conf.js --suite perform",
+    "getReport": "allure generate --clean allure-results && allure open allure-report"
+  },
+  "author": "nusrat jahan",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^9.15.0",
+    "@wdio/cli": "^9.15.0",
+    "@wdio/local-runner": "^9.15.0",
+    "@wdio/mocha-framework": "^9.15.0",
+    "@wdio/spec-reporter": "^9.15.0",
+    "chai": "^5.2.0"
+  }
+}
