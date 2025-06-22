@@ -13,7 +13,7 @@ class Performace{
 
 async productName() {
     const el = inventoryLocator.product_d_name;
-    await el.waitForExist({ timeout: 15000 }); // Wait up to 15 seconds
+    await el.waitForExist({ timeout: 15000 }); 
     return await el.getText();
 }
 
@@ -23,7 +23,7 @@ async productName() {
 
 async product_price() {
     const el = inventoryLocator.product_d_price;
-    await el.waitForExist({ timeout: 15000 }); // Wait up to 15 seconds
+    await el.waitForExist({ timeout: 15000 }); 
     let s1 = await el.getText();
     s1 = s1.replace("$", "");
     return Number(s1);
